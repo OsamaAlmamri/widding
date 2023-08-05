@@ -41,18 +41,18 @@
                             ( {{$product->reviews->count()}} )
                         </label>
                     </div>
-                    <div>
-                        @if($product->discount > 0)
-                            <strike
-                                style="font-size: 12px!important;color: #E96A6A!important;">
-                                {{\App\CPU\Helpers::currency_converter($product->unit_price)}}
-                            </strike>
-                        @endif
-                    </div>
-                    <div class="flash-product-price">
-                        {{\App\CPU\Helpers::currency_converter($product->unit_price-\App\CPU\Helpers::get_product_discount($product,$product->unit_price))}}
+{{--                    <div>--}}
+{{--                        @if($product->discount > 0)--}}
+{{--                            <strike--}}
+{{--                                style="font-size: 12px!important;color: #E96A6A!important;">--}}
+{{--                                {{\App\CPU\Helpers::currency_converter($product->unit_price)}}--}}
+{{--                            </strike>--}}
+{{--                        @endif--}}
+{{--                    </div>--}}
+{{--                    <div class="flash-product-price">--}}
+{{--                        {{\App\CPU\Helpers::currency_converter($product->unit_price-\App\CPU\Helpers::get_product_discount($product,$product->unit_price))}}--}}
 
-                    </div>
+{{--                    </div>--}}
 
                 </div>
             </div>

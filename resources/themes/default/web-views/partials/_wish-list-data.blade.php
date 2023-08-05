@@ -22,15 +22,15 @@
                                 <span class="sellerName"> {{\App\CPU\translate('Brand')}} :{{$product->brand?$product->brand['name']:''}} </span>
                                 @endif
 
-                                <div class="">
-                                    @if($product->discount > 0)
-                                    <strike style="color: #E96A6A;" class="{{Session::get('direction') === "rtl" ? 'ml-1' : 'mr-3'}}">
-                                        {{\App\CPU\Helpers::currency_converter($product->unit_price)}}
-                                    </strike>
-                                @endif
-                                <span
-                                    class="font-weight-bold amount">{{\App\CPU\Helpers::get_price_range($product) }}</span>
-                                </div>
+{{--                                <div class="">--}}
+{{--                                    @if($product->discount > 0)--}}
+{{--                                    <strike style="color: #E96A6A;" class="{{Session::get('direction') === "rtl" ? 'ml-1' : 'mr-3'}}">--}}
+{{--                                        {{\App\CPU\Helpers::currency_converter($product->unit_price)}}--}}
+{{--                                    </strike>--}}
+{{--                                @endif--}}
+{{--                                <span--}}
+{{--                                    class="font-weight-bold amount">{{\App\CPU\Helpers::get_price_range($product) }}</span>--}}
+{{--                                </div>--}}
                             </div>
                             <a href="javascript:" class="wishlist_product_icon">
                                 <i class="czi-close-circle" onclick="removeWishlist('{{$product['id']}}')"

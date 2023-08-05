@@ -117,18 +117,18 @@
                 @endif
             @endfor
         </h6>
-        <div class="product-price">
-            <span class="text-accent ptp">
-            {{\App\CPU\Helpers::currency_converter(
-            $product->unit_price-(\App\CPU\Helpers::get_product_discount($product,$product->unit_price))
-            )}}
-            </span>
-            @if($product->discount > 0)
-                <strike style="font-size: 12px!important;color: grey!important;">
-                    {{\App\CPU\Helpers::currency_converter($product->unit_price)}}
-                </strike>
-            @endif
-        </div>
+{{--        <div class="product-price">--}}
+{{--            <span class="text-accent ptp">--}}
+{{--            {{\App\CPU\Helpers::currency_converter(--}}
+{{--            $product->unit_price-(\App\CPU\Helpers::get_product_discount($product,$product->unit_price))--}}
+{{--            )}}--}}
+{{--            </span>--}}
+{{--            @if($product->discount > 0)--}}
+{{--                <strike style="font-size: 12px!important;color: grey!important;">--}}
+{{--                    {{\App\CPU\Helpers::currency_converter($product->unit_price)}}--}}
+{{--                </strike>--}}
+{{--            @endif--}}
+{{--        </div>--}}
         @if($product['current_stock']<=0)
             <label class="badge badge-danger stock-out-side">{{\App\CPU\translate('Stock Out')}}</label>
         @endif

@@ -248,18 +248,18 @@
 
                                 </div>
                                 <div class="mb-3">
-                                    @if($product->discount > 0)
-                                        <strike style="color: #E96A6A;" class="{{Session::get('direction') === "rtl" ? 'ml-1' : 'mr-3'}}">
-                                            {{\App\CPU\Helpers::currency_converter($product->unit_price)}}
-                                        </strike>
-                                    @endif
-                                    <span class="h3 font-weight-normal text-accent ">
-                                        {{\App\CPU\Helpers::get_price_range($product) }}
-                                    </span>
-                                    <span class="{{Session::get('direction') === "rtl" ? 'mr-2' : 'ml-2'}} __text-12px font-regular">
-                                        (<span>{{\App\CPU\translate('tax')}} : </span>
-                                        <span id="set-tax-amount"></span>)
-                                    </span>
+{{--                                    @if($product->discount > 0)--}}
+{{--                                        <strike style="color: #E96A6A;" class="{{Session::get('direction') === "rtl" ? 'ml-1' : 'mr-3'}}">--}}
+{{--                                            {{\App\CPU\Helpers::currency_converter($product->unit_price)}}--}}
+{{--                                        </strike>--}}
+{{--                                    @endif--}}
+{{--                                    <span class="h3 font-weight-normal text-accent ">--}}
+{{--                                        {{\App\CPU\Helpers::get_price_range($product) }}--}}
+{{--                                    </span>--}}
+{{--                                    <span class="{{Session::get('direction') === "rtl" ? 'mr-2' : 'ml-2'}} __text-12px font-regular">--}}
+{{--                                        (<span>{{\App\CPU\translate('tax')}} : </span>--}}
+{{--                                        <span id="set-tax-amount"></span>)--}}
+{{--                                    </span>--}}
                                 </div>
 
                                 <form id="add-to-cart-form" class="mb-2">
@@ -352,12 +352,12 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                            <div id="chosen_price_div">
-                                                <div class="d-flex justify-content-center align-items-center {{Session::get('direction') === "rtl" ? 'ml-2' : 'mr-2'}}">
-                                                    <div class="product-description-label"><strong>{{\App\CPU\translate('total_price')}}</strong> : </div>
-                                                    &nbsp; <strong id="chosen_price"></strong>
-                                                </div>
-                                            </div>
+{{--                                            <div id="chosen_price_div">--}}
+{{--                                                <div class="d-flex justify-content-center align-items-center {{Session::get('direction') === "rtl" ? 'ml-2' : 'mr-2'}}">--}}
+{{--                                                    <div class="product-description-label"><strong>{{\App\CPU\translate('total_price')}}</strong> : </div>--}}
+{{--                                                    &nbsp; <strong id="chosen_price"></strong>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
                                         </div>
                                     </div>
                                     <div class="row no-gutters d-none mt-2 flex-start d-flex">

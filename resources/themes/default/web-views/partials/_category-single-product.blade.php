@@ -49,19 +49,19 @@
                 </span>
             </div>
             <div class="justify-content-between text-center">
-                <div class="product-price text-center" style="font-weight: 400;
-                font-size: 12px;">
-                    @if($product->discount > 0)
-                        <strike style="font-size: 12px!important;color: #E96A6A!important;">
-                            {{\App\CPU\Helpers::currency_converter($product->unit_price)}}
-                        </strike><br>
-                    @endif
-                    <span class="text-accent">
-                        {{\App\CPU\Helpers::currency_converter(
-                            $product->unit_price-(\App\CPU\Helpers::get_product_discount($product,$product->unit_price))
-                        )}}
-                    </span>
-                </div>
+{{--                <div class="product-price text-center" style="font-weight: 400;--}}
+{{--                font-size: 12px;">--}}
+{{--                    @if($product->discount > 0)--}}
+{{--                        <strike style="font-size: 12px!important;color: #E96A6A!important;">--}}
+{{--                            {{\App\CPU\Helpers::currency_converter($product->unit_price)}}--}}
+{{--                        </strike><br>--}}
+{{--                    @endif--}}
+{{--                    <span class="text-accent">--}}
+{{--                        {{\App\CPU\Helpers::currency_converter(--}}
+{{--                            $product->unit_price-(\App\CPU\Helpers::get_product_discount($product,$product->unit_price))--}}
+{{--                        )}}--}}
+{{--                    </span>--}}
+{{--                </div>--}}
             </div>
 
         </div>
