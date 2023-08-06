@@ -742,14 +742,14 @@
                                             @if($bestSell->product->discount > 0)
                                                 <div class="d-flex"
                                                      style="top:0;position:absolute;{{Session::get('direction') === "rtl" ? 'right:0;' : 'left:0;'}}">
-                                                    <span class="for-discoutn-value p-1 pl-2 pr-2"
-                                                          style="{{Session::get('direction') === "rtl" ? 'border-radius:0px 5px' : 'border-radius:5px 0px'}};">
-                                                        @if ($bestSell->product->discount_type == 'percent')
-                                                            {{round($bestSell->product->discount)}}%
-                                                        @elseif($bestSell->product->discount_type =='flat')
-                                                            {{\App\CPU\Helpers::currency_converter($bestSell->product->discount)}}
-                                                        @endif {{\App\CPU\translate('off')}}
-                                                    </span>
+{{--                                                    <span class="for-discoutn-value p-1 pl-2 pr-2"--}}
+{{--                                                          style="{{Session::get('direction') === "rtl" ? 'border-radius:0px 5px' : 'border-radius:5px 0px'}};">--}}
+{{--                                                        @if ($bestSell->product->discount_type == 'percent')--}}
+{{--                                                            {{round($bestSell->product->discount)}}%--}}
+{{--                                                        @elseif($bestSell->product->discount_type =='flat')--}}
+{{--                                                            {{\App\CPU\Helpers::currency_converter($bestSell->product->discount)}}--}}
+{{--                                                        @endif {{\App\CPU\translate('off')}}--}}
+{{--                                                    </span>--}}
                                                 </div>
                                             @endif
                                             <div class="d-flex flex-wrap p-2">
@@ -778,20 +778,20 @@
                                                         <label class="badge-style">( {{$bestSell->product->reviews_count}} )</label>
                                                     </span>
                                                     </div>
-                                                    <div>
-                                                        @if($bestSell->product->discount > 0)
-                                                            <strike class="__color-E96A6A __text-12px">
-                                                                {{\App\CPU\Helpers::currency_converter($bestSell->product->unit_price)}}
-                                                            </strike>
-                                                        @endif
-                                                    </div>
-                                                    <div class="widget-product-meta">
-                                                    <span class="text-accent">
-                                                        {{\App\CPU\Helpers::currency_converter(
-                                                        $bestSell->product->unit_price-(\App\CPU\Helpers::get_product_discount($bestSell->product,$bestSell->product->unit_price))
-                                                        )}}
-                                                    </span>
-                                                    </div>
+{{--                                                    <div>--}}
+{{--                                                        @if($bestSell->product->discount > 0)--}}
+{{--                                                            <strike class="__color-E96A6A __text-12px">--}}
+{{--                                                                {{\App\CPU\Helpers::currency_converter($bestSell->product->unit_price)}}--}}
+{{--                                                            </strike>--}}
+{{--                                                        @endif--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="widget-product-meta">--}}
+{{--                                                    <span class="text-accent">--}}
+{{--                                                        {{\App\CPU\Helpers::currency_converter(--}}
+{{--                                                        $bestSell->product->unit_price-(\App\CPU\Helpers::get_product_discount($bestSell->product,$bestSell->product->unit_price))--}}
+{{--                                                        )}}--}}
+{{--                                                    </span>--}}
+{{--                                                    </div>--}}
                                                 </div>
                                             </div>
                                         </a>
@@ -824,14 +824,14 @@
                                             @if($top->product->discount > 0)
                                                 <div class="d-flex"
                                                      style="top:0;position:absolute;{{Session::get('direction') === "rtl" ? 'right:0;' : 'left:0;'}}">
-                                                    <span class="for-discoutn-value p-1 pl-2 pr-2"
-                                                          style="{{Session::get('direction') === "rtl" ? 'border-radius:0px 5px' : 'border-radius:5px 0px'}};">
-                                                        @if ($top->product->discount_type == 'percent')
-                                                            {{round($top->product->discount)}}%
-                                                        @elseif($top->product->discount_type =='flat')
-                                                            {{\App\CPU\Helpers::currency_converter($top->product->discount)}}
-                                                        @endif {{\App\CPU\translate('off')}}
-                                                    </span>
+{{--                                                    <span class="for-discoutn-value p-1 pl-2 pr-2"--}}
+{{--                                                          style="{{Session::get('direction') === "rtl" ? 'border-radius:0px 5px' : 'border-radius:5px 0px'}};">--}}
+{{--                                                        @if ($top->product->discount_type == 'percent')--}}
+{{--                                                            {{round($top->product->discount)}}%--}}
+{{--                                                        @elseif($top->product->discount_type =='flat')--}}
+{{--                                                            {{\App\CPU\Helpers::currency_converter($top->product->discount)}}--}}
+{{--                                                        @endif {{\App\CPU\translate('off')}}--}}
+{{--                                                    </span>--}}
                                                 </div>
                                             @endif
                                             <div class="d-flex flex-wrap p-2">
@@ -868,12 +868,12 @@
                                                             </strike>
                                                         @endif
                                                     </div>
-                                                    <div class="widget-product-meta">
-                                                    <span class="text-accent">
-                                                        {{\App\CPU\Helpers::currency_converter(
-                                                        $top->product->unit_price-(\App\CPU\Helpers::get_product_discount($top->product,$top->product->unit_price))
-                                                        )}}
-                                                    </span>
+{{--                                                    <div class="widget-product-meta">--}}
+{{--                                                    <span class="text-accent">--}}
+{{--                                                        {{\App\CPU\Helpers::currency_converter(--}}
+{{--                                                        $top->product->unit_price-(\App\CPU\Helpers::get_product_discount($top->product,$top->product->unit_price))--}}
+{{--                                                        )}}--}}
+{{--                                                    </span>--}}
                                                     </div>
                                                 </div>
                                             </div>

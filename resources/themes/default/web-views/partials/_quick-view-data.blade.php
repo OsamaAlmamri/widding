@@ -234,24 +234,24 @@
 
                     </div>
                 </div>
-{{--                <div class="mb-3">--}}
-{{--                    <span--}}
-{{--                        class="h3 font-weight-normal text-accent {{Session::get('direction') === "rtl" ? 'ml-1' : 'mr-1'}}">--}}
-{{--                        {{\App\CPU\Helpers::get_price_range($product) }}--}}
-{{--                    </span>--}}
-{{--                    @if($product->discount > 0)--}}
-{{--                        <strike style="font-size: 12px!important;color: grey!important;">--}}
-{{--                            {{\App\CPU\Helpers::currency_converter($product->unit_price)}}--}}
-{{--                        </strike>--}}
-{{--                    @endif--}}
-{{--                </div>--}}
+                {{--                <div class="mb-3">--}}
+                {{--                    <span--}}
+                {{--                        class="h3 font-weight-normal text-accent {{Session::get('direction') === "rtl" ? 'ml-1' : 'mr-1'}}">--}}
+                {{--                        {{\App\CPU\Helpers::get_price_range($product) }}--}}
+                {{--                    </span>--}}
+                {{--                    @if($product->discount > 0)--}}
+                {{--                        <strike style="font-size: 12px!important;color: grey!important;">--}}
+                {{--                            {{\App\CPU\Helpers::currency_converter($product->unit_price)}}--}}
+                {{--                        </strike>--}}
+                {{--                    @endif--}}
+                {{--                </div>--}}
 
-{{--                @if($product->discount > 0)--}}
-{{--                    <div class="flex-start mb-3">--}}
-{{--                        <div><strong>{{\App\CPU\translate('discount')}} : </strong></div>--}}
-{{--                        <div><strong id="set-discount-amount" class="mx-2"></strong></div>--}}
-{{--                    </div>--}}
-{{--                @endif--}}
+                {{--                @if($product->discount > 0)--}}
+                {{--                    <div class="flex-start mb-3">--}}
+                {{--                        <div><strong>{{\App\CPU\translate('discount')}} : </strong></div>--}}
+                {{--                        <div><strong id="set-discount-amount" class="mx-2"></strong></div>--}}
+                {{--                    </div>--}}
+                {{--                @endif--}}
 
                 <div class="flex-start mb-3">
                     <div><strong>{{\App\CPU\translate('tax')}} : </strong></div>
@@ -346,14 +346,14 @@
                     </div>
 
                     <div class="d-flex flex-wrap mt-3 __gap-15" id="chosen_price_div">
-{{--                        <div>--}}
-{{--                            <div class="product-description-label">{{\App\CPU\translate('Total Price')}}:</div>--}}
-{{--                        </div>--}}
-{{--                        <div>--}}
-{{--                            <div class="product-price">--}}
-{{--                                <strong id="chosen_price"></strong>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        {{--                        <div>--}}
+                        {{--                            <div class="product-description-label">{{\App\CPU\translate('Total Price')}}:</div>--}}
+                        {{--                        </div>--}}
+                        {{--                        <div>--}}
+                        {{--                            <div class="product-price">--}}
+                        {{--                                <strong id="chosen_price"></strong>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
                         <div class="col-12">
                             @if(($product['product_type'] == 'physical') && ($product['current_stock']<=0))
                                 <h5 class="mt-3" style="color: red">{{\App\CPU\translate('out_of_stock')}}</h5>
@@ -362,28 +362,34 @@
                     </div>
                     {{--to do--}}
                     <div class="__btn-grp align-items-center mt-2">
-                        @if(($product->added_by == 'seller' && ($seller_temporary_close || (isset($product->seller->shop) && $product->seller->shop->vacation_status && $current_date >= $seller_vacation_start_date && $current_date <= $seller_vacation_end_date))) ||
-                             ($product->added_by == 'admin' && ($inhouse_temporary_close || ($inhouse_vacation_status && $current_date >= $inhouse_vacation_start_date && $current_date <= $inhouse_vacation_end_date))))
-                            <button class="btn btn-secondary" type="button" disabled>
-                                {{\App\CPU\translate('buy_now')}}
-                            </button>
-                            <button class="btn btn--primary string-limit" type="button" disabled>
-                                {{\App\CPU\translate('add_to_cart')}}
-                            </button>
-                        @else
-                            <button class="btn btn-secondary" onclick="buy_now()" type="button">
-                                {{\App\CPU\translate('buy_now')}}
-                            </button>
-                            <button class="btn btn--primary string-limit" onclick="addToCart()" type="button">
-                                {{\App\CPU\translate('add_to_cart')}}
-                            </button>
-                        @endif
-                        <button type="button" onclick="addWishlist('{{$product['id']}}')"
-                                class="text-danger btn string-limit">
-                            <i class="fa fa-heart-o mr-2"
-                               aria-hidden="true"></i>
-                            <span class="countWishlist-{{$product['id']}}">{{$countWishlist}}</span>
-                        </button>
+                        {{--                        @if(($product->added_by == 'seller' && ($seller_temporary_close || (isset($product->seller->shop) && $product->seller->shop->vacation_status && $current_date >= $seller_vacation_start_date && $current_date <= $seller_vacation_end_date))) ||--}}
+                        {{--                             ($product->added_by == 'admin' && ($inhouse_temporary_close || ($inhouse_vacation_status && $current_date >= $inhouse_vacation_start_date && $current_date <= $inhouse_vacation_end_date))))--}}
+                        {{--                            <button class="btn btn-secondary" type="button" disabled>--}}
+                        {{--                                {{\App\CPU\translate('buy_now')}}--}}
+                        {{--                            </button>--}}
+                        {{--                            <button class="btn btn--primary string-limit" type="button" disabled>--}}
+                        {{--                                {{\App\CPU\translate('add_to_cart')}}--}}
+                        {{--                            </button>--}}
+                        {{--                        @else--}}
+                        {{--                            <button class="btn btn-secondary" onclick="buy_now()" type="button">--}}
+                        {{--                                {{\App\CPU\translate('buy_now')}}--}}
+                        {{--                            </button>--}}
+                        {{--                            <button class="btn btn--primary string-limit" onclick="addToCart()" type="button">--}}
+                        {{--                                {{\App\CPU\translate('add_to_cart')}}--}}
+                        {{--                            </button>--}}
+                        {{--                        @endif--}}
+
+                        <a target="_blank" href="https://wa.me/967779558800?text={{route('product',$product->slug)}}"
+                           class="btn btn--primary string-limit">
+                            {{\App\CPU\translate('Contact To Whatsapp')}}
+                        </a>
+
+                        {{--                        <button type="button" onclick="addWishlist('{{$product['id']}}')"--}}
+                        {{--                                class="text-danger btn string-limit">--}}
+                        {{--                            <i class="fa fa-heart-o mr-2"--}}
+                        {{--                               aria-hidden="true"></i>--}}
+                        {{--                            <span class="countWishlist-{{$product['id']}}">{{$countWishlist}}</span>--}}
+                        {{--                        </button>--}}
 
                         @if(($product->added_by == 'seller' && ($seller_temporary_close || (isset($product->seller->shop) && $product->seller->shop->vacation_status && $current_date >= $seller_vacation_start_date && $current_date <= $seller_vacation_end_date))) ||
                              ($product->added_by == 'admin' && ($inhouse_temporary_close || ($inhouse_vacation_status && $current_date >= $inhouse_vacation_start_date && $current_date <= $inhouse_vacation_end_date))))
